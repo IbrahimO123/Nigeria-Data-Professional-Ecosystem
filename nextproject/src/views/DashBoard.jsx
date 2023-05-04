@@ -107,7 +107,7 @@ function DashBoard() {
   useEffect(() => {
     setPage("Home");
     setTo("/");
-    setTimeout(() => fetchData(), 2000);
+    setTimeout(() => fetchData(), 4000);
   }, []);
 
   useEffect(() => {
