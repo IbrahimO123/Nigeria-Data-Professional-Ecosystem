@@ -3,7 +3,7 @@
 export const handleGetDataset = (list, key, role) => {
   const obj = {};
   const data = list.filter((item) => item.job_title === role);
-  const response = data.map((item) => item[key]).filter((res) => res !== "[]");
+  const response = data.map((item) => item[key])
   
   const word = response?.map((item) =>
     item?.slice(1, item.length - 1).split(",")
@@ -37,9 +37,9 @@ export const handleGetData = (list, key, role) => {
   for (let i = 0; i < edu.length; i++) {
     let item = edu[i];
     if (obj[item]) {
-      obj[item] += 2;
+      obj[item] += 1;
     } else {
-      obj[item] = 2;
+      obj[item] = 1;
     }
   }
   return obj;
