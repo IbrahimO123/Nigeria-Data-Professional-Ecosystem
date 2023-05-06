@@ -37,9 +37,9 @@ export const handleGetData = (list, key, role) => {
   for (let i = 0; i < edu.length; i++) {
     let item = edu[i];
     if (obj[item]) {
-      obj[item] += 1;
+      obj[item] += 2;
     } else {
-      obj[item] = 1;
+      obj[item] = 2;
     }
   }
   return obj;
