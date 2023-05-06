@@ -112,7 +112,7 @@ function DashBoard() {
   }, []);
 
   useEffect(() => {
-    setTimeout(getChart(), 2000);
+    getChart()
   }, [getChart]);
 
   return (
