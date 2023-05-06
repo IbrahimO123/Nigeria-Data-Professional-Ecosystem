@@ -3,10 +3,10 @@
 export const handleGetDataset = (list, key, role) => {
   const obj = {};
   const data = list.filter((item) => item.job_title === role);
-  const response = data.map((item) => item[key])
-  
-  const word = response?.map((item) =>
-    item?.slice(1, item.length - 1).split(",")
+  const response = data.map((item) => item[key]).filter((res) => res !== "[]");
+  console.log("Response", response);
+  const word = response.map((item) =>
+    item.slice(1, item.length - 1).split(",")
   );
   const simple = word.reduce((a, b) => a.concat(b), []);
   for (let i = 0; i < simple.length; i++) {
@@ -53,9 +53,7 @@ export const handleGetSector = (list, role) => {
   const sector = data
     .map((item) => item.Industry)
     .filter((res) => res !== "[]");
-  const word = sector.map((item) =>
-    item.slice(1, item.length - 1).split(",")
-  );
+  const word = sector.map((item) => item.slice(1, item.length - 1).split(","));
   const simple = word.reduce((a, b) => a.concat(b), []);
   for (let i = 0; i < simple.length; i++) {
     let item = simple[i]
