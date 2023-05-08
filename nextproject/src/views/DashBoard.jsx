@@ -56,6 +56,7 @@ function DashBoard() {
   };
 
   const getChart = useCallback(() => {
+    setLoading(true)
     const tools = handleGetDataset(chart, "Tools", role);
     setData({
       type: "Get_Data",
@@ -93,6 +94,7 @@ function DashBoard() {
       key: "sectors",
       value: sect,
     });
+    setLoading(false);
   }, [chart, role, plot, setData]);
 
   const handleInput = (e) => {
@@ -111,7 +113,8 @@ function DashBoard() {
   }, []);
 
   useEffect(() => {
-    getChart();
+    console.log("Chart",chart)
+    setTimeout(()=>getChart());
   }, [getChart]);
 
   return (
