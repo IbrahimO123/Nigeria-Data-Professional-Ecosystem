@@ -93,7 +93,6 @@ function DashBoard() {
       key: "sectors",
       value: sect,
     });
-    
   }, [chart, role, plot, setData]);
 
   const handleInput = (e) => {
@@ -112,7 +111,7 @@ function DashBoard() {
   }, []);
 
   useEffect(() => {
-    setTimeout(()=> getChart(), 5000);
+    getChart();
   }, [getChart]);
 
   return (
