@@ -42,7 +42,7 @@ function DashBoard() {
       console.error(e.message);
     }
   };
-  const fetchData = async () => {
+  const fetchData = useCallback(async () => {
     setLoading(true);
     try {
       const res = await handleConvert(sector);
@@ -53,7 +53,7 @@ function DashBoard() {
     } catch (e) {
       console.error(e.message);
     }
-  };
+  }, [loading]);
 
   const getChart = useCallback(() => {
     setLoading(true)
@@ -113,8 +113,7 @@ function DashBoard() {
   }, []);
 
   useEffect(() => {
-    console.log("Chart",chart)
-    setTimeout(()=>getChart());
+    getChart()
   }, [getChart]);
 
   return (
