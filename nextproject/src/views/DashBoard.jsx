@@ -103,17 +103,18 @@ function DashBoard() {
       field: e.target.name,
       payload: e.target.value,
     });
+    getChart();
   };
 
   useEffect(() => {
     setPage("Home");
     setTo("/");
-    setTimeout(() => fetchData(), 7000);
+    setTimeout(() => fetchData(), 2000);
   }, []);
 
   useEffect(() => {
     getChart()
-  }, [getChart]);
+  }, []);
 
   return (
     <Container className="dashboard">
