@@ -103,7 +103,6 @@ function DashBoard() {
       field: e.target.name,
       payload: e.target.value,
     });
-    getChart();
   };
 
   useEffect(() => {
@@ -113,7 +112,7 @@ function DashBoard() {
   }, []);
 
   useEffect(() => {
-    setTimeout(()=> handleInput(), 5000);
+    setTimeout(()=> getChart(), 5000);
   }, [getChart]);
 
   return (
