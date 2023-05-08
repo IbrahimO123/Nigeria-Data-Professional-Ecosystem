@@ -113,8 +113,8 @@ function DashBoard() {
   }, []);
 
   useEffect(() => {
-    getChart()
-  }, []);
+    handleInput()
+  }, [getChart]);
 
   return (
     <Container className="dashboard">
