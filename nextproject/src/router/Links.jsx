@@ -5,7 +5,6 @@ import { AppContextState } from "../App";
 
 function Links() {
   const { page, to } = useContext(AppContextState);
-
   return (
     <Box p={2} component="div">
       <Container
