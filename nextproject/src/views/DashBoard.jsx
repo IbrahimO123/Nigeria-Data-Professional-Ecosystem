@@ -95,6 +95,7 @@ function DashBoard() {
       value: sect,
     });
     setLoading(false);
+    console.log("Data loaded" , data)
   }, [chart, role, plot, setData]);
 
   const handleInput = (e) => {
