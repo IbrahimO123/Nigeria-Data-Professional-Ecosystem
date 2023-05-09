@@ -6,7 +6,6 @@ export const handleGetDataset = (list, key, role) => {
   const response = data
     .map((item) => item[key])
     .filter((res) => res !== "[]" || res !== undefined);
-
   const word = response.map((item) =>
     item.slice(1, item.length - 1).split(",")
   );
