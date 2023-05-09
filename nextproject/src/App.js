@@ -9,9 +9,6 @@ function App() {
   const [to, setTo] = useState("/dashboard");
   const initialState = {
     role: "Data Analyst",
-    location: "",
-    company: "",
-    expereince: "",
     tool: {},
     experience: {},
     education: {},
