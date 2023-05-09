@@ -48,6 +48,7 @@ export const handleGetData = (list, key, role) => {
   return obj;
 };
 
+
 //Getting the sector from the data
 export const handleGetSector = (list, role) => {
   const obj = {};
