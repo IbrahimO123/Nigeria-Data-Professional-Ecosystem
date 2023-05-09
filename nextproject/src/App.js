@@ -16,6 +16,7 @@ function App() {
     skills: {},
     sectors: {},
   };
+  
   const reducer = (state, action) => {
     switch (action.type) {
       case "User_Input":

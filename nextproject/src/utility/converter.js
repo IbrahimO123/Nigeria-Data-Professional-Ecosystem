@@ -8,7 +8,6 @@ export const fetchCsv = async (file) => {
   const csv = decoder.decode(result.value);
   return csv;
 };
-
 export const converter = async (path) => {
   const csv = await fetchCsv(path);
   const result = Papa.parse(csv, {

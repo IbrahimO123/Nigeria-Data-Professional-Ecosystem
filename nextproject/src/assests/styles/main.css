@@ -10,12 +10,10 @@
     opacity: .70;
 }
 
-
 .link {
     text-decoration: none;
     color: #ffffff;
 }
-
 
 .dashboard {
     background-color: #f5ebe8;
@@ -25,7 +23,6 @@
     padding: 30px;
     min-height: 100vh;
 }
-
 
 .not-found {
     background-color: #eeeeee;
